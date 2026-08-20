@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      server:
+        webmvc:
+          routes:
+            - id: gestao-alunos
+              uri: lb://ms-gestao-alunos
+              predicates:
+                - Path=/alunos/**
+            - id: historico
+              uri: lb://ms-historico
+              predicates:
+                - Path=/historico/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
