@@ -255,6 +255,24 @@ npm start
 
 ---
 
+## 🧪 Testes
+
+Foram desenvolvidos testes automatizados para validar a camada de persistência de cada microsserviço, utilizando `@DataJpaTest` com banco H2 em memória.
+
+### ms-gestao-alunos
+
+`src/test/java/br/edu/infnet/ms_gestao_alunos/aluno/AlunoTest.java`
+
+| Teste                                      | Cenário                                                                           |
+| ------------------------------------------ | --------------------------------------------------------------------------------- |
+| `deveSalvarAlunoQuandoDadosForemValidos`   | Salva um aluno e confirma que o ID foi gerado e os dados persistidos corretamente |
+| `deveBuscarAlunoPorIdQuandoAlunoExistir`   | Busca um aluno pelo ID e confirma que os dados retornados batem                   |
+| `deveListarTodosAlunosQuandoAlunosExistem` | Salva múltiplos alunos e confirma que todos aparecem na listagem                  |
+| `deveAtualizarAlunoQuandoAlunoExistir`     | Atualiza um campo do aluno e confirma que a alteração foi persistida              |
+| `deveExcluirAlunoQuandoAlunoExistir`       | Remove um aluno e confirma que ele deixa de existir no repositório                |
+
+---
+
 ## 📜 Histórico de Alterações
 
 Toda operação realizada sobre um aluno gera automaticamente um registro de histórico, através da comunicação Feign entre `ms-gestao-alunos` e `ms-historico`.
@@ -277,7 +295,7 @@ Cada registro armazena:
 
 **Letícia Gomes**
 
-Projeto desenvolvido para a disciplina **Desenvolvimento de Softwares Escaláveis**, aplicando conceitos de uma arquitetura baseada em microsserviços com Spring Boot e Spring Cloud no back-end e React no front-end, Domain-Driven Design (DDD), Spring Data JPA, persistência de dados.
+Projeto desenvolvido para a disciplina **Desenvolvimento de Softwares Escaláveis**, aplicando conceitos de uma arquitetura baseada em microsserviços com Spring Boot e Spring Cloud no back-end e React no front-end, Domain-Driven Design (DDD), Spring Data JPA, persistência de dados e testes.
 
 ---
 
