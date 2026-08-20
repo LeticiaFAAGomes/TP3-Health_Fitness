@@ -1,4 +1,4 @@
-#🏋️ Sistema de Gestão de Alunos
+# 🏋️ Sistema de Gestão de Alunos
 
 ### Teste de Performance 3
 
@@ -255,22 +255,6 @@ npm start
 
 ---
 
-## 🧪 Testes
-
-Foram desenvolvidos testes automatizados cobrindo:
-
-- Persistência de `Aluno` e `Historico` (`@DataJpaTest`)
-- Regras de negócio do `AlunoService`, com o `HistoricoClient` mockado (`@MockBean`)
-- Regras de negócio do `HistoricoService`
-
-Os testes utilizam:
-
-- JUnit 5
-- Spring Boot Test
-- Banco H2 em memória
-
----
-
 ## 📜 Histórico de Alterações
 
 Toda operação realizada sobre um aluno gera automaticamente um registro de histórico, através da comunicação Feign entre `ms-gestao-alunos` e `ms-historico`.
@@ -286,3 +270,17 @@ Cada registro armazena:
 - `alunoId`
 - `descricao`
 - `data`
+
+---
+
+## 👩‍💻 Autora
+
+**Letícia Gomes**
+
+Projeto desenvolvido para a disciplina **Desenvolvimento de Softwares Escaláveis**, aplicando conceitos de uma arquitetura baseada em microsserviços com Spring Boot e Spring Cloud no back-end e React no front-end, Domain-Driven Design (DDD), Spring Data JPA, persistência de dados.
+
+---
+
+## 📄 Licença
+
+Este projeto está licenciado sob a licença **MIT**.
